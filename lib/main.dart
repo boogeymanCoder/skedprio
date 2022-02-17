@@ -1,10 +1,27 @@
 import "package:flutter/material.dart";
 
 void main() {
-  runApp(const Center(
-    child: Text(
-      "Hello Flutter!",
-      textDirection: TextDirection.ltr,
+  runApp(
+    const MaterialApp(
+      home: MyApp(),
     ),
-  ));
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text("Hello World!"),
+          ],
+        ),
+      ),
+    );
+  }
 }

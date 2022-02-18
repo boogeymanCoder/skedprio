@@ -1,4 +1,7 @@
 import "package:flutter/material.dart";
+import 'package:skedprio/text.dart';
+import 'actions.dart';
+import 'title.dart';
 
 void main() {
   runApp(
@@ -19,13 +22,15 @@ class MyApp extends StatelessWidget {
         leading: const Icon(Icons.menu),
         title: const Text("My App"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text("Hello World!"),
-          ],
-        ),
+      body: ListView(
+        children: [
+          Expanded(
+            child: Image.asset("assets/images/image.jpg"),
+          ),
+          const GuideTitle(),
+          const GuideActions(),
+          const TextSection(),
+        ],
       ),
     );
   }

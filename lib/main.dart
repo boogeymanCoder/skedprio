@@ -19,10 +19,19 @@ class MyApp extends StatelessWidget {
         title: const Text("My App"),
       ),
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text("Hello World!"),
+          children: [
+            Expanded(
+              child: Image.asset("assets/images/photo1.jpg"),
+            ),
+            Expanded(
+              flex: 2,
+              child: Image.asset("assets/images/photo2.jpg"),
+            ),
+            Expanded(
+              child: Image.asset("assets/images/photo3.jpg"),
+            ),
           ],
         ),
       ),
